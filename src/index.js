@@ -3,7 +3,7 @@ const express = require('express')
 const request = require('request')
 
 const router = express.Router();
-const url = 'http://api.weatherstack.com/current?access_key=3e2ae37fdc65c44e373c52d71df5d71f&query='+123+','+231+'&units=m'
+const url = 'http://api.weatherstack.com/current?access_key=3e2ae37fdc65c44e373c52d71df5d71f&query='+'143'+','+'-231'+'&units=m'
 
 router.get('/weather/today',async (req, res) => {
     request({url,json:true},(error,{body})=>{
