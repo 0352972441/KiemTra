@@ -51,13 +51,13 @@ app.get('/about',(req, res)=>{
     })
 })
 
-app.get('/weather',(req, res)=>{
-    if(!req.query.address){
+app.get('/weather/:address',(req, res)=>{
+    if(res.params.address){
         return res.send({
             error: "You must provide an address"
         })
     }
-    geo(req.query.address,(error, {longitude, latitude, location} = {})=>{
+    geo(req.params.address,(error, {longitude, latitude, location} = {})=>{
         if(error){
             return res.send({
                 error
