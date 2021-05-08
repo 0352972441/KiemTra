@@ -3,7 +3,7 @@ const path = require('path')
 const hbs = require('hbs')
 const geo = require('./utils/geocode')
 const forecast = require('./utils/forecast')
-
+const router = require('./index')
 
 
 const app = express()
@@ -16,6 +16,7 @@ const publicDirectoryPath = path.join(__dirname,"../public")
 const viewsPath =  path.join(__dirname,"../templates/views")
 const partialsPath = path.join(__dirname,"../templates/partials")
 const jsPath = path.join(__dirname,'../public/js')
+app.use(router)
 
 //
 const port = process.env.PORT || 3000
