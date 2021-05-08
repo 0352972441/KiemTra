@@ -52,7 +52,7 @@ app.get('/about',(req, res)=>{
 })
 
 app.get('/weather/:address',(req, res)=>{
-    if(res.params.address){
+    if(!res.params.address){
         return res.send({
             error: "You must provide an address"
         })
