@@ -7,19 +7,15 @@ const url = 'http://api.weatherstack.com/current?access_key=3e2ae37fdc65c44e373c
 
 router.get('/weather/today',async (req, res) => {
     request({url,json:true},(error,{body})=>{
-        if(error){
-            res.send({
-                error:"Unable to connect to weather services!"
-            })
-        }else if(body.error){
-            res.send({error:"Unable to find loaction. Try later"})
-        }else{
+        try {
             res.send({
                 description: body.current.weather_descriptions[0],
                 temperature: body.current.temperature,
                 feelslike: body.current.feelslike,
                 forecastData:body.current.weather_descriptions[0]+" It is a "+body.current.temperature+" degree out.It feels like "+body.current.feelslike +" degree out"
             })
+        } catch (error) {
+            res.send(error)
         }
     })
 })
