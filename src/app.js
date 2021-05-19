@@ -33,7 +33,7 @@ app.get('/sinh6',(req,res)=>{
     res.render('sinh6')
 })
 app.get('/anh7',(req,res)=>{
-    res.render('anh')
+    res.render('anh7')
 })
 
 app.listen(port, ()=>{
