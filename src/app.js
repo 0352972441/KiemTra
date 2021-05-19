@@ -29,6 +29,10 @@ app.get('/kiemtra',(req,res)=>{
     res.render('kiemtra')
 })
 
+app.get('/sinh6',(req,res)=>{
+    res.render('sinh6')
+})
+
 
 app.listen(port, ()=>{
     console.log("Server up on "+ port);
