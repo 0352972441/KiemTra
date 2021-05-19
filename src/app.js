@@ -32,8 +32,17 @@ app.get('/kiemtra',(req,res)=>{
 app.get('/sinh6',(req,res)=>{
     res.render('sinh6')
 })
+
 app.get('/anh7',(req,res)=>{
     res.render('anh7')
+})
+
+app.get('/anh6',(req,res)=>{
+    res.render('anh6')
+})
+
+app.get('/anh8',(req,res)=>{
+    res.render('anh8')
 })
 
 app.listen(port, ()=>{
