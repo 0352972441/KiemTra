@@ -29,7 +29,7 @@ app.get('/kiemtra',(req,res)=>{
     res.render('kiemtra')
 })
 
-app.get('/sinh6',(req,res)=>{
+app.get('/sinh7',(req,res)=>{
     res.render('sinh6')
 })
 
