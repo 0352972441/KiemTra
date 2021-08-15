@@ -41,7 +41,7 @@ app.get('/anh6',(req,res)=>{
     res.render('anh6')
 })
 
-app.get('/anh8',(req,res)=>{
+app.get('/toan7',(req,res)=>{
     res.render('anh8')
 })
 
