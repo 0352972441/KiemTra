@@ -42,7 +42,7 @@ app.get('/anh6',(req,res)=>{
 })
 
 app.get('/toan7',(req,res)=>{
-    res.render('anh8')
+    res.render('toan7')
 })
 
 app.listen(port, ()=>{
